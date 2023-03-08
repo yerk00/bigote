@@ -1,10 +1,11 @@
 .bigotito{
     width: 180px;
     height: 180px;
-    left: 400px;
+    left: 500px;
     border-radius: 50%;
     position: absolute;
-    color: brown;
+    top: 360px;
+    color: black;
     box-shadow: 
     150px 240px 0 0 currentColor,
     300px 240px 0 0 currentColor;
@@ -35,7 +36,7 @@
 }
 .boca{
     width: 180px;
-    height: 180px;
+    height: 200px;
     left: 400px;
     border-radius: 50%;
     position: absolute;
@@ -45,12 +46,100 @@
     300px 240px 0 0 currentColor,
        
 }
+img{
+    height:750px; 
+    width:1500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 500px;
+}
 body{
     height: 80px;
     right: 800px;
-    background-image: url('bar.png');
+    background-image: url('espac.jpg');
     background-repeat: no-repeat;
     background-position: right top;
     background-size: auto;
+}
+.bigotito:before {
+    animation: shakeLeft 1s ease-in-out infinite;
+}
+.bigotito:after {
+    animation: shakeRight 1s ease-in-out infinite;
+}
+@keyframes shakeLeft {
+    0%{
+        transform: rotate(-50deg);
+    }
+    50%{
+        transform: rotate(-30deg);
+    }
+    100%{
+        transform: rotate(-50deg);
+    }
+}
+@keyframes shakeRight {
+    0%{
+        transform: rotate(50deg);
+    }
+    50%{
+        transform: rotate(30deg);
+    }
+    100%{
+        transform: rotate(50deg);
+    }
+}
+.titulo{
+    text-align: center;
+    color:blue;
+}
+.id{
+    text-align: center;
+    color:aqua;
+}
+.cabello{
+    width: 1100px;
+    height: 180px;
+    left: -40px;
+    position: absolute;
+    top: -100px;
+    color: black;
     
+}
+.cabello::after{
+    content: " ";
+    position: absolute;
+    left: 1400px;
+    top: -30px;
+    width: 210px;
+    height: 120px;
+    border-bottom: solid 950px currentColor;
+    border-radius: 0 0 0 100%;
+    transform: rotate(90deg);
+    transform-origin: left 210px;
+}
+.cabello::before{
+    content: " ";
+    position: absolute;
+    left: 550px;
+    top: 150px;
+    width: 210px;
+    height: 120px;
+    border-bottom: solid 180px currentColor;
+    border-radius: 0 0 100% 0 ;
+    transform: rotate(-90deg);
+    transform-origin: left 210px;
+}
+.cabello::before{
+    content: " ";
+    position: absolute;
+    left: 230px;
+    top: 180px;
+    width: 210px;
+    height: 120px;
+    border-bottom: solid 950px currentColor;
+    border-radius: 0 0 100% 0 ;
+    transform: rotate(-90deg);
+    transform-origin: left 210px;
 }
